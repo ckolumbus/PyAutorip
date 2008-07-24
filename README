@@ -1,0 +1,33 @@
+pyautorip - a program for simple commandline ripping of a bunch of  
+            audio CD's
+
+-- ABOUT -------------------------------------------------------------
+
+
+
+-- AUTHORS ------------------------------------------------------------
+
+Chris Drexler <chris@drexler-family.com>
+
+
+-- RELATED URLS -------------------------------------------------------
+
+http://autorip.sourceforge.net/  pyautorip is based on this program
+
+-- DEPENDENCIES -------------------------------------------------------
+
+
+Name           Version     URL                                  Remarks
+python-CDDB     1.4.0 
+python-eyeD3    0.6.16
+python-mutagen  1.14
+utf8.py                    Delivered with this program see doc/COPYING-utf8.txt
+
+-- INSTALLATION --------------------------------------------------------
+
+
+
+-- TODO ----------------------------------------------------------------
+
+- remove eyeD3 dependency, use mutagen instead
+- remove utf8.py dependency with native python constructs
