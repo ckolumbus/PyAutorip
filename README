@@ -3,7 +3,6 @@ pyautorip - a program for simple commandline ripping of a bunch of
 
 -- ABOUT -------------------------------------------------------------
 
-xxx
 
 -- AUTHORS ------------------------------------------------------------
 
@@ -30,4 +29,4 @@ utf8.py                    Delivered with this program see doc/COPYING-utf8.txt
 -- TODO ----------------------------------------------------------------
 
 - remove eyeD3 dependency, use mutagen instead
-- remove utf8.py dependency with native python constructs
+- replace utf8.py dependency with native python constructs
