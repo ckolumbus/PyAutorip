@@ -51,7 +51,7 @@ import types
 
 ENCODING = locale.getpreferredencoding()
 
-version = "0.2"
+version = "0.3b"
 debug = False
 no_action = False
 
@@ -109,7 +109,7 @@ def tagMp3File(file, trackNr, info):
     #tag.update( eyeD3.ID3_V1_1)
 
 
-encoder_config = (1, )
+encoder_config = (0, )
 encoders = [
 ("nice lame --preset 128 -S \"%(wavfilename)s\" \"%(encfilename)s\" > /dev/null 2>&1", "mp3", tagMp3File ),
 ("nice flac -s --best -o \"%(encfilename)s\" \"%(wavfilename)s\"", "flac", tagFlacFile)
@@ -488,9 +488,14 @@ def getCddbDiscInfoRemote(disc_id):
             print "USING ID: %s, Category: %s, Title: %s" % \
                      (info['discIdCddb'], info['category'], 
                       disc_info['title'])
+        track_stat  = None
+        track_info  = None
+        try:
+            (track_stat, track_info) = CDDB.read(disc_info['category'], 
+                                                 disc_info['disc_id'])
+        except:
+            trac_stat =  -1
 
-        (track_stat, track_info) = CDDB.read(disc_info['category'], 
-                                           disc_info['disc_id'])
         if track_stat == 210:
             if debug:
                 print "success getting track info!"
