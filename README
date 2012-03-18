@@ -22,11 +22,15 @@ python-eyeD3    0.6.16
 python-mutagen  1.14
 utf8.py                    Delivered with this program see doc/COPYING-utf8.txt
 
--- INSTALLATION --------------------------------------------------------
+cdparanoia
+lame
+flac 
 
+-- INSTALLATION --------------------------------------------------------
 
 
 -- TODO ----------------------------------------------------------------
 
 - remove eyeD3 dependency, use mutagen instead
 - replace utf8.py dependency with native python constructs
+- check proper installation of dependencies
